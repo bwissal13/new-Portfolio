@@ -45,6 +45,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="icon" href="/w.png" />
+        <link rel="icon" type="image/png" href="/w.png" sizes="32x32" />
+        <link rel="shortcut icon" href="/w.png" />
+        <link rel="icon" type="image/x-icon" href="/w.png" />
+      </head>
       <body className={`${inter.variable} ${geistMono.variable} font-sans antialiased`}>
         <ThemeProvider
           attribute="class"
