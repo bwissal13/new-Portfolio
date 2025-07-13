@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useTheme } from "next-themes";
 import { Sun, Moon, Minimize2, Download } from "lucide-react";
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 interface NavigationProps {
   onFullScreenToggle?: () => void;
@@ -61,26 +62,35 @@ export function Navigation({ onFullScreenToggle, handleDownloadCV }: NavigationP
             Contact
           </Link>
           {handleDownloadCV && (
-            <button
+            <motion.button
+              whileHover={{ scale: 1.05, y: -2 }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ duration: 0.2 }}
               onClick={handleDownloadCV}
               className="hidden sm:flex p-2 rounded-lg hover:bg-muted transition-colors"
               aria-label="Download CV"
             >
               <Download className="h-4 w-4" />
               <span className="text-sm font-medium">Curriculum Vitae</span>
-            </button>
+            </motion.button>
           )}
           {onFullScreenToggle && (
-            <button
+            <motion.button
+              whileHover={{ scale: 1.05, y: -2 }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ duration: 0.2 }}
               onClick={onFullScreenToggle}
               className="p-2 rounded-lg hover:bg-muted transition-colors"
               aria-label="Toggle fullscreen"
               style={{ margin: 0 }}
             >
               <Minimize2 className="h-4 w-4" />
-            </button>
+            </motion.button>
           )}
-          <button
+          <motion.button
+            whileHover={{ scale: 1.05, y: -2 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ duration: 0.2 }}
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
             className="p-2 rounded-lg hover:bg-muted transition-colors"
             aria-label="Toggle theme"
@@ -90,7 +100,7 @@ export function Navigation({ onFullScreenToggle, handleDownloadCV }: NavigationP
             ) : (
               <Moon className="h-4 w-4" />
             )}
-          </button>
+          </motion.button>
         </div>
         {/* Center: W. logo (mobile only) */}
         <div className="flex-1 flex sm:hidden justify-center">
@@ -129,14 +139,17 @@ export function Navigation({ onFullScreenToggle, handleDownloadCV }: NavigationP
           Contact
         </Link>
         {handleDownloadCV && (
-          <button
+          <motion.button
+            whileHover={{ scale: 1.05, y: -2 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ duration: 0.2 }}
             onClick={handleDownloadCV}
             className="p-2 rounded-lg hover:bg-muted transition-colors"
             aria-label="Download CV"
           >
             <Download className="h-4 w-4" />
             <span className="text-sm font-medium">Curriculum Vitae</span>
-          </button>
+          </motion.button>
         )}
       </div>
     </nav>

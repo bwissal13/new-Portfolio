@@ -311,13 +311,13 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="mb-8"
+            className="mb-4 md:mb-8"
           >
-            <h1 className="text-lg md:text-xl lg:text-2xl font-medium text-primary mb-4 h-8">
+            <h1 className="text-base md:text-lg lg:text-2xl font-medium text-primary mb-2 md:mb-4 h-8">
               {greeting.displayText}
               {!greeting.isComplete && <span className="animate-pulse">|</span>}
             </h1>
-            <h2 className="text-6xl md:text-7xl lg:text-8xl font-bold text-primary h-24 md:h-28 lg:h-32">
+            <h2 className="text-3xl md:text-6xl lg:text-7xl font-bold text-primary h-16 md:h-24 lg:h-32">
               {portfolio.displayText}
               {greeting.isComplete && !portfolio.isComplete && <span className="animate-pulse">|</span>}
             </h2>
@@ -328,9 +328,9 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="mb-16 flex justify-center"
+            className="mb-8 md:mb-16 flex justify-center"
           >
-            <div className="relative w-full max-w-lg">
+            <div className="relative w-full max-w-xs md:max-w-lg">
               <motion.input
                 whileFocus={{ scale: 1.02 }}
                 type="text"
@@ -342,7 +342,7 @@ export default function Home() {
                   }
                 }}
                 placeholder="Ask me anything..."
-                className="w-full px-6 py-4 rounded-full border border-border bg-background/80 backdrop-blur-sm text-primary placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/20 transition-colors"
+                className="w-full px-4 md:px-6 py-3 md:py-4 rounded-full border border-border bg-background/80 backdrop-blur-sm text-primary placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/20 transition-colors text-sm md:text-base"
               />
               <motion.button 
                 whileHover={{ scale: 1.1, y: -2 }}
@@ -360,7 +360,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="grid grid-cols-4 gap-2 max-w-2xl mx-auto"
+            className="grid grid-cols-2 md:grid-cols-4 gap-2 max-w-xs md:max-w-2xl mx-auto"
           >
             {navigationCards.map((card, index) => (
               <motion.div
