@@ -1,0 +1,673 @@
+{
+  "projects": [
+    {
+      "id": "ebankify",
+      "name": "eBankify",
+      "slug": "ebankify",
+      "description": "A comprehensive modular e-banking API built with Spring Boot, designed to provide secure and efficient banking services for various user types with enterprise-level security standards.",
+      "shortDescription": "Enterprise-grade banking system with advanced security and real-time processing",
+      "status": "Production-ready",
+      "category": "Enterprise Application",
+      "featured": true,
+      "technologies": [
+        "Spring Boot",
+        "Spring Security", 
+        "JPA/Hibernate",
+        "ElasticSearch",
+        "MySQL",
+        "Maven",
+        "Docker",
+        "JWT",
+        "REST API",
+        "Swagger"
+      ],
+      "features": [
+        {
+          "title": "Enterprise Security Architecture",
+          "description": "Role-based authentication with JWT tokens (Admin, Employee, User)",
+          "details": [
+            "Multi-layer security with banking-grade encryption",
+            "Secure transaction processing with full audit trails", 
+            "Input validation and SQL injection prevention",
+            "Spring Security integration with custom authentication"
+          ]
+        },
+        {
+          "title": "Advanced Transaction System",
+          "description": "Instant and scheduled payment processing with data integrity",
+          "details": [
+            "Concurrent transaction handling with ACID properties",
+            "Transaction history with real-time analytics",
+            "Multi-currency support and automated reconciliation",
+            "Atomic transaction processing with proper isolation levels"
+          ]
+        },
+        {
+          "title": "ElasticSearch Integration", 
+          "description": "Lightning-fast search through millions of transactions",
+          "details": [
+            "Real-time indexing and advanced querying",
+            "Performance optimization for large datasets",
+            "Custom search filters and sorting capabilities",
+            "Transaction analytics and reporting"
+          ]
+        },
+        {
+          "title": "Modular Architecture",
+          "description": "Scalable microservices-ready design with clean separation",
+          "details": [
+            "Clean separation of concerns with Spring Boot",
+            "Comprehensive API documentation with Swagger",
+            "Docker containerization for easy deployment",
+            "Modular design ready for microservices migration"
+          ]
+        },
+        {
+          "title": "Advanced Loan Management",
+          "description": "Complete loan processing system with approval workflows",
+          "details": [
+            "Loan application and approval workflows",
+            "Risk assessment and fraud detection algorithms",
+            "Interest calculation and payment scheduling",
+            "Credit scoring and eligibility assessment"
+          ]
+        }
+      ],
+      "challenges": [
+        "Implementing enterprise-level security with Spring Security",
+        "Handling concurrent transactions while maintaining ACID properties", 
+        "Integrating ElasticSearch for optimal performance with large datasets",
+        "Building scalable architecture ready for production deployment",
+        "Ensuring data integrity across complex financial operations"
+      ],
+      "solutions": [
+        "Implemented sophisticated locking mechanisms and proper transaction isolation levels",
+        "Used Spring Security with JWT for secure, stateless authentication",
+        "Optimized ElasticSearch indexing for real-time transaction searches",
+        "Designed modular architecture with clear separation of concerns",
+        "Built comprehensive audit trails and logging systems"
+      ],
+      "highlights": [
+        "Zero critical bugs in production-ready codebase",
+        "Enterprise-level security following banking standards",
+        "Scalable architecture supporting millions of transactions",
+        "Complete API documentation and testing suite",
+        "Modular design enabling easy feature additions"
+      ],
+      "github": "https://github.com/bwissal13/eBankify",
+      "demo": null,
+      "images": [
+        "/projects/ebankify/architecture.png",
+        "/projects/ebankify/dashboard.png", 
+        "/projects/ebankify/security.png"
+      ],
+      "technicalSpecs": {
+        "architecture": "Layered Architecture with Spring Boot",
+        "database": "MySQL with JPA/Hibernate ORM",
+        "search": "ElasticSearch for transaction indexing",
+        "security": "Spring Security with JWT authentication",
+        "documentation": "Swagger/OpenAPI 3.0",
+        "testing": "JUnit and Integration Tests",
+        "deployment": "Docker containerization"
+      },
+      "learningOutcomes": [
+        "Mastered Spring Boot ecosystem and enterprise patterns",
+        "Deep understanding of financial system security requirements", 
+        "Experience with ElasticSearch integration and optimization",
+        "Knowledge of concurrent programming and transaction management",
+        "Expertise in REST API design and documentation"
+      ],
+      "impact": "Built a production-ready banking system that demonstrates enterprise-level development skills and could serve real banking operations",
+      "dateCreated": "2024",
+      "dateUpdated": "2024"
+    },
+    {
+      "id": "anazor",
+      "name": "Anazor", 
+      "slug": "anazor",
+      "description": "A comprehensive digital marketplace platform for artists to showcase, sell their artwork, and connect with the community through an integrated forum system.",
+      "shortDescription": "Art marketplace connecting artists with buyers and building community",
+      "status": "Live platform",
+      "category": "E-commerce & Community",
+      "featured": true,
+      "technologies": [
+        "Laravel",
+        "PHP", 
+        "HTML5",
+        "CSS3",
+        "Bootstrap",
+        "JavaScript",
+        "MySQL",
+        "Eloquent ORM",
+        "Blade Templating"
+      ],
+      "features": [
+        {
+          "title": "Artist Portfolio System",
+          "description": "Beautiful showcase for artists to display their work professionally",
+          "details": [
+            "Customizable artist profiles and portfolios",
+            "Image gallery with zoom and filtering capabilities",
+            "Artist biography and background stories",
+            "Social media integration and sharing"
+          ]
+        },
+        {
+          "title": "E-commerce Engine",
+          "description": "Complete buying and selling platform with secure payments",
+          "details": [
+            "Product catalog with categories and search",
+            "Shopping cart and checkout system",
+            "Payment integration with secure processing",
+            "Order management and tracking"
+          ]
+        },
+        {
+          "title": "Community Forum",
+          "description": "Interactive platform where artists connect and collaborate",
+          "details": [
+            "Discussion forums by art categories",
+            "Artist collaboration opportunities",
+            "Tips and techniques sharing",
+            "Community events and challenges"
+          ]
+        },
+        {
+          "title": "Rating and Review System",
+          "description": "Build trust between buyers and sellers through feedback",
+          "details": [
+            "5-star rating system for artworks",
+            "Detailed buyer reviews and testimonials",
+            "Artist reputation scoring",
+            "Quality assurance and moderation"
+          ]
+        },
+        {
+          "title": "Advanced Search and Discovery",
+          "description": "Help users find exactly what they're looking for",
+          "details": [
+            "Advanced filtering by style, medium, price",
+            "Search by artist name or artwork title", 
+            "Recommendation engine for similar works",
+            "Trending and featured artwork sections"
+          ]
+        }
+      ],
+      "challenges": [
+        "Creating intuitive UX for complex art marketplace workflows",
+        "Building scalable community platform with Laravel",
+        "Integrating secure payment processing for art sales",
+        "Designing responsive interface for artist portfolios",
+        "Managing large image files and gallery optimization"
+      ],
+      "solutions": [
+        "Implemented user-centered design with extensive user testing",
+        "Used Laravel's Eloquent ORM for efficient database operations",
+        "Integrated secure payment gateways with Laravel Cashier",
+        "Built responsive design using Bootstrap framework",
+        "Optimized image storage and delivery with CDN integration"
+      ],
+      "highlights": [
+        "Complete ecosystem connecting artists with art lovers",
+        "Seamless integration of e-commerce and community features",
+        "Beautiful, responsive design optimized for art showcase",
+        "Secure payment processing and order management",
+        "Active community forum fostering artist collaboration"
+      ],
+      "github": "https://github.com/bwissal13/Anazor",
+      "demo": null,
+      "images": [
+        "/projects/anazor/homepage.png",
+        "/projects/anazor/gallery.png",
+        "/projects/anazor/forum.png"
+      ],
+      "technicalSpecs": {
+        "framework": "Laravel 9+ with MVC architecture",
+        "database": "MySQL with Eloquent ORM",
+        "frontend": "Blade templates with Bootstrap CSS",
+        "authentication": "Laravel built-in authentication",
+        "storage": "File storage with image optimization",
+        "payments": "Payment gateway integration"
+      },
+      "learningOutcomes": [
+        "Mastered Laravel framework and PHP development",
+        "Experience building complex e-commerce systems",
+        "Understanding of community platform development",
+        "Skills in responsive web design and UX",
+        "Knowledge of payment integration and security"
+      ],
+      "impact": "Created a platform that genuinely connects artists with buyers while building a supportive community around art",
+      "dateCreated": "2024",
+      "dateUpdated": "2024"
+    },
+    {
+      "id": "tafukut",
+      "name": "Tafukut",
+      "slug": "tafukut", 
+      "description": "An innovative interactive coding tutorial platform that combines video tutorials with real-time code editing, bridging the gap between watching and doing.",
+      "shortDescription": "Revolutionary learning platform with video-code synchronization",
+      "status": "Beta version",
+      "category": "Educational Technology",
+      "featured": true,
+      "technologies": [
+        "React",
+        "JavaScript",
+        "PHP",
+        "Laravel",
+        "CSS3",
+        "HTML5",
+        "WebSocket",
+        "Code Editor API",
+        "Video API"
+      ],
+      "features": [
+        {
+          "title": "Video-Code Synchronization",
+          "description": "Watch tutorials while coding in real-time in the same interface",
+          "details": [
+            "Seamless video and code editor integration",
+            "Auto-sync code changes with video progress",
+            "Pause, rewind, and continue coding simultaneously",
+            "Multiple programming language support"
+          ]
+        },
+        {
+          "title": "Live Code Execution",
+          "description": "See your code run instantly without switching windows",
+          "details": [
+            "Real-time code compilation and execution",
+            "Instant feedback on code errors",
+            "Multiple language runtime environments",
+            "Console output and debugging tools"
+          ]
+        },
+        {
+          "title": "Interactive Learning Modules",
+          "description": "Structured courses with hands-on coding exercises",
+          "details": [
+            "Step-by-step coding tutorials",
+            "Interactive challenges and quizzes",
+            "Progress tracking and achievements",
+            "Adaptive learning paths"
+          ]
+        },
+        {
+          "title": "Code Sharing and Collaboration",
+          "description": "Learn together and get help from the community",
+          "details": [
+            "Share code snippets with the community",
+            "Collaborative coding sessions",
+            "Peer code reviews and feedback",
+            "Study groups and coding challenges"
+          ]
+        },
+        {
+          "title": "Multi-Language Support",
+          "description": "Learn various programming languages in one platform",
+          "details": [
+            "JavaScript, Python, Java, and more",
+            "Language-specific tutorials and examples",
+            "Syntax highlighting and auto-completion",
+            "Language-specific debugging tools"
+          ]
+        }
+      ],
+      "challenges": [
+        "Synchronizing video playback with live code execution",
+        "Building real-time code editor with React",
+        "Managing multiple programming language runtimes",
+        "Creating seamless user experience across video and code",
+        "Implementing collaborative features and real-time updates"
+      ],
+      "solutions": [
+        "Built custom video player with code synchronization API",
+        "Integrated Monaco Editor for professional code editing experience",
+        "Used containerized environments for secure code execution",
+        "Implemented WebSocket for real-time collaboration features",
+        "Created state management system for seamless user experience"
+      ],
+      "highlights": [
+        "Revolutionary approach to coding education",
+        "Eliminates the friction between watching and coding",
+        "Real-time collaborative learning environment",
+        "Multi-language support with live execution",
+        "Interactive learning that adapts to user progress"
+      ],
+      "github": "https://github.com/bwissal13/Tafukut",
+      "demo": null,
+      "images": [
+        "/projects/tafukut/interface.png",
+        "/projects/tafukut/editor.png",
+        "/projects/tafukut/collaboration.png"
+      ],
+      "technicalSpecs": {
+        "frontend": "React with hooks and context API",
+        "backend": "Laravel API with PHP",
+        "editor": "Monaco Editor integration",
+        "realtime": "WebSocket for live collaboration",
+        "execution": "Containerized code execution environment",
+        "video": "Custom video player with sync API"
+      },
+      "learningOutcomes": [
+        "Advanced React development with complex state management",
+        "Real-time application development with WebSocket",
+        "Video integration and synchronization techniques",
+        "Code execution environment development",
+        "Educational technology and UX design principles"
+      ],
+      "impact": "Revolutionizes how people learn programming by eliminating the barrier between watching tutorials and actually coding",
+      "dateCreated": "2024",
+      "dateUpdated": "2024"
+    },
+    {
+      "id": "taskifyapi",
+      "name": "TaskifyApi",
+      "slug": "taskifyapi",
+      "description": "A robust task management API built with PHP, designed for efficient project organization and team collaboration.",
+      "shortDescription": "Task management API for project organization and team collaboration",
+      "status": "Complete",
+      "category": "API Development",
+      "featured": false,
+      "technologies": [
+        "PHP",
+        "RESTful API",
+        "MySQL",
+        "Composer",
+        "JSON",
+        "API Documentation"
+      ],
+      "features": [
+        {
+          "title": "Task Management System",
+          "description": "Complete CRUD operations for task management",
+          "details": [
+            "Create, read, update, delete tasks",
+            "Task categorization and tagging",
+            "Due date and priority management",
+            "Task status tracking and updates"
+          ]
+        },
+        {
+          "title": "Project Organization",
+          "description": "Organize tasks within projects and workflows",
+          "details": [
+            "Project creation and management",
+            "Task grouping within projects",
+            "Project progress tracking",
+            "Milestone and deadline management"
+          ]
+        },
+        {
+          "title": "Team Collaboration",
+          "description": "Features for team coordination and communication",
+          "details": [
+            "Task assignment to team members",
+            "Collaboration tools and comments",
+            "Team member role management",
+            "Activity logging and notifications"
+          ]
+        },
+        {
+          "title": "API Documentation",
+          "description": "Comprehensive documentation for easy integration",
+          "details": [
+            "Clear endpoint documentation",
+            "Request/response examples",
+            "Authentication guidelines",
+            "Error handling documentation"
+          ]
+        }
+      ],
+      "challenges": [
+        "Designing efficient API endpoints for complex task relationships",
+        "Ensuring data consistency across task operations",
+        "Implementing proper authentication and authorization",
+        "Creating comprehensive API documentation"
+      ],
+      "solutions": [
+        "Used RESTful design principles for intuitive API structure",
+        "Implemented proper database transactions for data integrity",
+        "Built secure authentication system with proper validation",
+        "Created detailed documentation with examples and use cases"
+      ],
+      "highlights": [
+        "Clean, RESTful API architecture",
+        "Comprehensive documentation and examples", 
+        "Efficient task and project management features",
+        "Secure authentication and data validation",
+        "Easy integration for third-party applications"
+      ],
+      "github": "https://github.com/bwissal13/TaskifyApi",
+      "demo": null,
+      "images": [
+        "/projects/taskifyapi/api-docs.png",
+        "/projects/taskifyapi/endpoints.png"
+      ],
+      "technicalSpecs": {
+        "language": "PHP with object-oriented design",
+        "architecture": "RESTful API with MVC pattern",
+        "database": "MySQL with PDO for data access",
+        "documentation": "Comprehensive API documentation",
+        "validation": "Input validation and sanitization",
+        "security": "Authentication and authorization system"
+      },
+      "learningOutcomes": [
+        "RESTful API design and development principles",
+        "PHP object-oriented programming and best practices",
+        "Database design and transaction management",
+        "API documentation and testing strategies",
+        "Security considerations in API development"
+      ],
+      "impact": "Provides a solid foundation for task management applications with clean, well-documented API",
+      "dateCreated": "2024",
+      "dateUpdated": "2024"
+    },
+    {
+      "id": "hotel-management",
+      "name": "Hotel Management System",
+      "slug": "hotel-management",
+      "description": "A console-based hotel reservation management application developed in Java, demonstrating object-oriented programming principles.",
+      "shortDescription": "Java console application for hotel reservation management",
+      "status": "Educational project",
+      "category": "Console Application",
+      "featured": false,
+      "technologies": [
+        "Java",
+        "Object-Oriented Programming",
+        "Console Application",
+        "Data Structures",
+        "File I/O"
+      ],
+      "features": [
+        {
+          "title": "Room Reservation Management",
+          "description": "Complete system for managing hotel room bookings",
+          "details": [
+            "Room availability checking and booking",
+            "Reservation creation and modification",
+            "Check-in and check-out processes",
+            "Room type and pricing management"
+          ]
+        },
+        {
+          "title": "Guest Information System",
+          "description": "Comprehensive guest data management",
+          "details": [
+            "Guest registration and profile management",
+            "Contact information and preferences",
+            "Booking history and loyalty tracking",
+            "Guest services and special requests"
+          ]
+        },
+        {
+          "title": "Reporting Features",
+          "description": "Generate reports for hotel operations",
+          "details": [
+            "Occupancy reports and statistics",
+            "Revenue tracking and analysis",
+            "Guest demographics and preferences",
+            "Room utilization reports"
+          ]
+        }
+      ],
+      "challenges": [
+        "Implementing complex business logic in console environment",
+        "Managing data persistence without database",
+        "Creating intuitive console user interface",
+        "Handling multiple reservation scenarios and edge cases"
+      ],
+      "solutions": [
+        "Used object-oriented design with clear class hierarchies",
+        "Implemented file-based data storage for persistence",
+        "Created menu-driven interface with clear navigation",
+        "Built comprehensive validation and error handling"
+      ],
+      "highlights": [
+        "Demonstrates strong OOP principles and design patterns",
+        "Complete hotel management functionality in console",
+        "Clean code architecture with proper separation of concerns",
+        "Comprehensive error handling and data validation",
+        "Educational value for learning Java fundamentals"
+      ],
+      "github": "https://github.com/bwissal13/java01",
+      "demo": null,
+      "images": [
+        "/projects/hotel/console-interface.png",
+        "/projects/hotel/class-diagram.png"
+      ],
+      "technicalSpecs": {
+        "language": "Java with OOP principles",
+        "interface": "Console-based user interface",
+        "storage": "File-based data persistence",
+        "patterns": "MVC and other design patterns",
+        "validation": "Input validation and error handling"
+      },
+      "learningOutcomes": [
+        "Object-oriented programming principles in Java",
+        "Console application development and user interface design",
+        "File I/O and data persistence techniques",
+        "Business logic implementation and validation",
+        "Software design patterns and architecture"
+      ],
+      "impact": "Demonstrates fundamental programming skills and object-oriented design thinking",
+      "dateCreated": "2024",
+      "dateUpdated": "2024"
+    },
+    {
+      "id": "employee-management-dto",
+      "name": "Employee Management System (DTO)",
+      "slug": "employee-management-dto",
+      "description": "A Java application for managing employee information and departments, showcasing Data Transfer Object patterns and clean architecture.",
+      "shortDescription": "Java application demonstrating DTO patterns and clean architecture",
+      "status": "Complete",
+      "category": "Enterprise Pattern Demo",
+      "featured": false,
+      "technologies": [
+        "Java",
+        "DTO Pattern",
+        "Object-Oriented Design",
+        "Clean Architecture",
+        "Design Patterns"
+      ],
+      "features": [
+        {
+          "title": "Employee Information Management",
+          "description": "Comprehensive employee data handling with DTO patterns",
+          "details": [
+            "Employee CRUD operations with DTOs",
+            "Data validation and transformation",
+            "Employee hierarchy and reporting structure",
+            "Performance tracking and evaluation"
+          ]
+        },
+        {
+          "title": "Department Organization",
+          "description": "Department structure and management system",
+          "details": [
+            "Department creation and management",
+            "Employee assignment to departments",
+            "Department budgeting and resource allocation",
+            "Cross-department collaboration tracking"
+          ]
+        },
+        {
+          "title": "Clean Architecture Implementation",
+          "description": "Proper separation of concerns with DTO patterns",
+          "details": [
+            "Data Transfer Objects for clean data flow",
+            "Service layer with business logic separation",
+            "Repository pattern for data access",
+            "Proper validation and error handling"
+          ]
+        }
+      ],
+      "challenges": [
+        "Implementing proper DTO patterns for data transfer",
+        "Ensuring clean separation of concerns in architecture",
+        "Managing complex employee-department relationships",
+        "Building comprehensive data validation system"
+      ],
+      "solutions": [
+        "Created well-defined DTOs for each data entity",
+        "Implemented layered architecture with clear boundaries",
+        "Used proper design patterns for data access and business logic",
+        "Built robust validation framework with custom validators"
+      ],
+      "highlights": [
+        "Exemplary implementation of DTO design pattern",
+        "Clean architecture with proper separation of concerns",
+        "Comprehensive data validation and error handling",
+        "Professional-grade code structure and documentation",
+        "Demonstrates enterprise development best practices"
+      ],
+      "github": "https://github.com/bwissal13/DTO",
+      "demo": null,
+      "images": [
+        "/projects/dto/architecture-diagram.png",
+        "/projects/dto/dto-pattern.png"
+      ],
+      "technicalSpecs": {
+        "language": "Java with advanced OOP concepts",
+        "patterns": "DTO, Repository, Service Layer patterns",
+        "architecture": "Clean Architecture with layered design",
+        "validation": "Custom validation framework",
+        "documentation": "Comprehensive code documentation"
+      },
+      "learningOutcomes": [
+        "Data Transfer Object pattern implementation",
+        "Clean architecture principles and practice",
+        "Enterprise software design patterns",
+        "Advanced Java programming techniques",
+        "Professional code organization and documentation"
+      ],
+      "impact": "Demonstrates mastery of enterprise design patterns and clean architecture principles",
+      "dateCreated": "2024",
+      "dateUpdated": "2024"
+    }
+  ],
+  "statistics": {
+    "totalProjects": 6,
+    "featuredProjects": 3,
+    "technologiesUsed": [
+      "Spring Boot",
+      "React", 
+      "Laravel",
+      "Java",
+      "PHP",
+      "JavaScript",
+      "MySQL",
+      "ElasticSearch",
+      "Docker",
+      "CSS3",
+      "HTML5"
+    ],
+    "categories": [
+      "Enterprise Application",
+      "E-commerce & Community", 
+      "Educational Technology",
+      "API Development",
+      "Console Application",
+      "Enterprise Pattern Demo"
+    ]
+  }
+} 

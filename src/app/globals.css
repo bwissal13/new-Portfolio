@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 222.2 84% 4.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 84% 4.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222.2 84% 4.9%;
+  --primary: 213 100% 27%; /* Blue primary color */
+  --primary-foreground: 0 0% 100%;
+  --secondary: 213 32% 91%; /* Light blue secondary */
+  --secondary-foreground: 213 100% 27%;
+  --muted: 213 20% 95%; /* Very light blue muted */
+  --muted-foreground: 213 16% 46%;
+  --accent: 213 32% 91%; /* Light blue accent */
+  --accent-foreground: 213 100% 27%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 213 31% 91%; /* Light blue border */
+  --input: 213 31% 91%;
+  --ring: 213 100% 27%; /* Blue ring/focus color */
+  --radius: 0.5rem;
+  --font-geist-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.dark {
+  --background: 213 84% 5%; /* Dark blue background */
+  --foreground: 213 40% 98%;
+  --card: 213 84% 5%;
+  --card-foreground: 213 40% 98%;
+  --popover: 213 84% 5%;
+  --popover-foreground: 213 40% 98%;
+  --primary: 213 100% 70%; /* Lighter blue for dark mode */
+  --primary-foreground: 213 84% 5%;
+  --secondary: 213 32% 15%; /* Dark blue secondary */
+  --secondary-foreground: 213 40% 98%;
+  --muted: 213 32% 15%;
+  --muted-foreground: 213 20% 65%;
+  --accent: 213 32% 15%;
+  --accent-foreground: 213 40% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 213 32% 15%;
+  --input: 213 32% 15%;
+  --ring: 213 100% 70%;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+body {
+  color: hsl(var(--foreground));
+  background: hsl(var(--background));
+  font-feature-settings: "rlig" 1, "calt" 1;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted-foreground));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--foreground));
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection */
+::selection {
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+}
+
+/* Focus styles */
+.focus-visible {
+  outline: 2px solid hsl(var(--ring));
+  outline-offset: 2px;
+}
+
+/* Custom animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Typography improvements */
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+/* Code blocks */
+pre {
+  overflow-x: auto;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  background: hsl(var(--muted));
+  font-family: var(--font-geist-mono);
+}
+
+code {
+  font-size: 0.875em;
+  font-weight: 600;
+  background: hsl(var(--muted));
+  padding: 0.125rem 0.25rem;
+  border-radius: 0.25rem;
+  font-family: var(--font-geist-mono);
+}
+
+pre code {
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  font-weight: 400;
+}

@@ -1,0 +1,256 @@
+{
+  "personal": {
+    "name": "Wissal Baaziz",
+    "title": "Full Stack Developer | UI/UX Designer | Digital Craftsman",
+    "role": "Full Stack Developer",
+    "tagline": "Code is poetry written for machines but read by humans",
+    "location": "Morocco",
+    "email": "baazizwissal13@gmail.com",
+    "website": "https://www.bwissal.software/",
+    "image": "/me.jpeg",
+    "about": {
+      "shortBio": "Passionate Full Stack Developer and UI/UX Designer with a mathematics background, currently honing skills at Youcode-UM6P. Transforms ideas into elegant, functional solutions with a focus on scalable applications, beautiful user interfaces, and clean code architecture.",
+      "background": "My path to development started with mathematics - I loved the logical thinking and problem-solving aspects. Then I discovered coding and realized it was like solving math problems but with the power to create something real and functional!",
+      "philosophy": "Code is poetry written for machines but read by humans. I believe in building technology that bridges gaps - between complexity and simplicity, between problems and solutions, between different communities of people.",
+      "mission": "To build technology that creates real positive change in people's lives while helping other developers reach their potential."
+    },
+    "education": {
+      "current": "Youcode-UM6P",
+      "description": "Currently studying at Youcode-UM6P - Intensive full-stack development program with hands-on project experience",
+      "background": "Mathematics background providing strong analytical and problem-solving foundation",
+      "approach": "Project-based learning with real-world applications rather than just theory"
+    },
+    "experience": [
+      {
+        "title": "Full Stack Developer (Student)",
+        "company": "Youcode-UM6P",
+        "period": "Current",
+        "description": "Intensive training in full-stack development with focus on modern technologies and best practices. Building production-ready applications that solve real problems.",
+        "technologies": ["React", "Spring Boot", "Laravel", "Agile methodologies"],
+        "achievements": [
+          "Built eBankify - enterprise-grade banking system",
+          "Created Anazor - art marketplace with community features", 
+          "Developed Tafukut - innovative interactive learning platform",
+          "Earned GitHub Pull Shark achievement",
+          "Zero critical bugs in production-ready projects"
+        ]
+      }
+    ],
+    "skills": {
+      "frontend": {
+        "expert": ["React", "JavaScript", "HTML5", "CSS3"],
+        "proficient": ["Angular", "TypeScript", "Tailwind CSS", "Bootstrap"],
+        "learning": ["Advanced React patterns", "Vue.js"]
+      },
+      "backend": {
+        "expert": ["Spring Boot", "Laravel", "Java", "PHP"],
+        "proficient": ["Node.js", "Express.js", "REST API Design"],
+        "learning": ["Microservices", "Spring Cloud", "GraphQL"]
+      },
+      "database": {
+        "expert": ["MySQL", "PostgreSQL"],
+        "proficient": ["ElasticSearch", "MongoDB"],
+        "learning": ["Redis", "Database optimization"]
+      },
+      "tools": {
+        "expert": ["Git", "Maven", "Composer", "npm"],
+        "proficient": ["Docker", "Postman", "VS Code"],
+        "learning": ["Kubernetes", "CI/CD pipelines", "AWS"]
+      },
+      "design": {
+        "expert": ["UI/UX Design", "Figma", "Adobe Creative Suite"],
+        "proficient": ["Brand Identity", "Graphic Design", "Prototyping"],
+        "learning": ["Design Systems", "Advanced Animation"]
+      },
+      "methodologies": {
+        "proficient": ["Agile", "SCRUM", "Version Control", "Code Reviews"],
+        "learning": ["DevOps practices", "Test-Driven Development"]
+      }
+    },
+    "achievements": [
+      {
+        "title": "GitHub Pull Shark",
+        "description": "Multiple pull requests and active open source contributions",
+        "date": "2024",
+        "platform": "GitHub"
+      },
+      {
+        "title": "YOLO Achievement", 
+        "description": "Recognition for innovative approach and bold project implementations",
+        "date": "2024",
+        "platform": "GitHub"
+      },
+      {
+        "title": "Production-Ready Banking System",
+        "description": "Built eBankify with zero critical bugs and enterprise-level security",
+        "date": "2024",
+        "impact": "Demonstrates enterprise development capabilities"
+      },
+      {
+        "title": "Innovative EdTech Solution",
+        "description": "Created Tafukut - revolutionary interactive learning platform",
+        "date": "2024", 
+        "impact": "Bridges gap between watching tutorials and hands-on coding"
+      },
+      {
+        "title": "Community Platform Success",
+        "description": "Developed Anazor connecting artists with buyers and community",
+        "date": "2024",
+        "impact": "Brings together art community through technology"
+      }
+    ],
+    "interests": [
+      "Building scalable applications that solve real problems",
+      "Open source contributions and community building",
+      "UI/UX design and user experience optimization",
+      "Cloud technologies and microservices architecture",
+      "Educational technology and making learning accessible",
+      "Mathematical thinking applied to software development",
+      "Mentoring and knowledge sharing with fellow developers"
+    ],
+    "hobbies": {
+      "thinking": [
+        "Deep thinking and analytical problem-solving 🐻",
+        "Strategic planning for complex projects",
+        "Mathematical approach to development challenges",
+        "Reflective coding practices and architecture decisions"
+      ],
+      "coding": [
+        "Full Stack Development with React and Spring Boot 💻",
+        "Building scalable banking applications (eBankify)",
+        "Creating interactive learning platforms (Tafukut)",
+        "Developing community-driven marketplaces (Anazor)",
+        "Contributing to open source projects"
+      ],
+      "cooking": [
+        "Passionate about cooking and culinary arts 🍳",
+        "Experimenting with different cuisines and techniques",
+        "Finding creativity and balance through cooking",
+        "Sharing recipes and cooking experiences",
+        "Using cooking breaks to refresh during coding sessions"
+      ],
+      "design": [
+        "Professional graphic designer and visual artist 🛍️",
+        "Creating brand identities and visual systems",
+        "UI/UX design with Figma and Adobe Creative Suite",
+        "Bridging graphic design with web development",
+        "Building beautiful and functional user interfaces"
+      ],
+      "writing": [
+        "Technical writing and documentation 📝",
+        "Sharing development insights and experiences",
+        "Creating engaging content about technology",
+        "Documenting learning journey and project stories",
+        "Content creation for developer community"
+      ],
+      "community": [
+        "Supporting fellow developers and creators 🌕",
+        "Building connections in the tech community",
+        "Sharing knowledge through mentoring",
+        "Contributing to developer education",
+        "Creating content that inspires others"
+      ]
+    },
+    "goals": {
+      "short_term": [
+        "Master advanced Spring Boot and microservices architecture",
+        "Contribute to significant open source projects",
+        "Build scalable cloud-native applications",
+        "Develop expertise in DevOps and CI/CD practices"
+      ],
+      "medium_term": [
+        "Become a technical lead on innovative projects",
+        "Mentor junior developers and help them grow",
+        "Build technology that makes education more accessible",
+        "Establish reputation as expert in full-stack development"
+      ],
+      "long_term": [
+        "Lead development of impactful educational technology",
+        "Build systems that serve millions of users",
+        "Contribute to open source projects with global impact",
+        "Bridge technology with social good and community building"
+      ]
+    },
+    "values": [
+      "Quality over quantity - building things right",
+      "Continuous learning and growth mindset",
+      "Community over competition - helping others succeed",
+      "User-centered design and development",
+      "Clean, maintainable code that others can understand",
+      "Technology as a force for positive change"
+    ]
+  },
+  "social": {
+    "github": {
+      "url": "https://github.com/bwissal13",
+      "username": "bwissal13",
+      "description": "All my code, contributions, and project history"
+    },
+    "linkedin": {
+      "url": "https://linkedin.com/in/baaziz-wissal-311a9526a",
+      "description": "Professional updates and networking"
+    },
+    "instagram": {
+      "url": "https://www.instagram.com/baazizwissal/",
+      "username": "@baazizwissal",
+      "description": "Development journey, design work, and behind-the-scenes content",
+      "bio": "🐻 Thinking | Coding | Cooking 🛍️ Graphic designer 📝 Writer 🌕 Follow @liya_express1",
+      "stats": {
+        "posts": 15,
+        "followers": 375,
+        "following": 105
+      }
+    },
+    "website": {
+      "url": "https://www.bwissal.software/",
+      "description": "Complete portfolio showcasing all projects and skills"
+    },
+    "email": "baazizwissal13@gmail.com"
+  },
+  "projects_summary": {
+    "total": 6,
+    "featured": 3,
+    "categories": [
+      "Enterprise Application",
+      "E-commerce & Community",
+      "Educational Technology",
+      "API Development"
+    ],
+    "tech_stack": [
+      "Spring Boot",
+      "React", 
+      "Laravel",
+      "Java",
+      "PHP",
+      "JavaScript",
+      "MySQL",
+      "ElasticSearch",
+      "Docker"
+    ]
+  },
+  "testimonials": [
+    {
+      "text": "Wissal's mathematical background really shows in her systematic approach to solving complex problems. Her work on eBankify demonstrates enterprise-level thinking.",
+      "author": "Peer Developer",
+      "context": "Code Review Session"
+    },
+    {
+      "text": "The way she combines technical skills with design thinking is impressive. Anazor isn't just functional - it's beautiful and user-friendly.",
+      "author": "Project Collaborator", 
+      "context": "Team Project"
+    },
+    {
+      "text": "Tafukut shows real innovation. The idea of synchronizing video tutorials with live coding is exactly what the education space needs.",
+      "author": "Education Technology Enthusiast",
+      "context": "Project Showcase"
+    }
+  ],
+  "fun_facts": [
+    "Started with mathematics and fell in love with coding when she realized it's like solving math problems with real-world impact",
+    "Can design a beautiful interface and then build the entire backend to support it",
+    "Believes that the best code is not just functional but reads like poetry",
+    "Combines cooking breaks with coding sessions for creative problem-solving",
+    "Built a banking system as one of her first major projects (talk about jumping in the deep end!)",
+    "Thinks documentation is a love letter to future developers"
+  ]
+} 
