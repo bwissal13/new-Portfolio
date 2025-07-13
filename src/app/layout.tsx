@@ -17,25 +17,47 @@ const geistMono = {
 };
 
 export const metadata: Metadata = {
-  title: "bwissal - Full-Stack Developer & Web Designer",
-  description: "Full-stack developer and web designer specializing in React, Next.js, Node.js, and modern web technologies. Creating scalable applications with exceptional user experience.",
-  keywords: ["full stack developer", "web developer", "React developer", "Next.js", "Node.js", "TypeScript", "web designer", "UI/UX design", "JavaScript", "MongoDB", "portfolio"],
-  authors: [{ name: "bwissal" }],
-  creator: "bwissal",
+  title: "Wissal Baaziz (bwissal) - Full-Stack Developer & UI/UX Designer | Morocco",
+  description: "Wissal Baaziz (bwissal) - Full-stack developer and UI/UX designer specializing in Spring Boot, Laravel, React, Angular, Flutter and modern web technologies. Creating scalable applications with exceptional user experience. Based in Morocco.",
+  keywords: [
+    "Wissal Baaziz", "bwissal", "full stack developer", "web developer", "React developer", 
+    "Spring Boot", "Laravel", "Java", "PHP", "web designer", "UI/UX designer", "UI/UX design", 
+    "JavaScript", "MySQL", "portfolio", "developer", "designer", "Morocco", "Youcode-UM6P",
+    "Angular", "Flutter", "eBankify", "Anazor", "Tafukut", "graphic designer", "digital craftsman"
+  ],
+  authors: [{ name: "Wissal Baaziz" }, { name: "bwissal" }],
+  creator: "Wissal Baaziz",
   metadataBase: new URL("https://www.bwissal.software"),
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://www.bwissal.software",
-    title: "BAAZIZ Wissal - Full-Stack Developer & Web Designer",
-    description: "Full-stack developer and web designer specializing in React, Next.js, Node.js, and modern web technologies.",
-    siteName: "BAAZIZ Wissal",
+    title: "Wissal Baaziz (bwissal) - Full-Stack Developer & UI/UX Designer",
+    description: "Wissal Baaziz (bwissal) - Full-stack developer and UI/UX designer specializing in Spring Boot, Laravel, React, Angular, Flutter and modern web technologies. Creating scalable applications with exceptional user experience.",
+    siteName: "Wissal Baaziz Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "BAAZIZ Wissal - Full-Stack Developer & Web Designer",
-    description: "Full-stack developer and web designer specializing in React, Next.js, Node.js, and modern web technologies.",
+    title: "Wissal Baaziz (bwissal) - Full-Stack Developer & UI/UX Designer",
+    description: "Wissal Baaziz (bwissal) - Full-stack developer and UI/UX designer specializing in Spring Boot, Laravel, React, Angular, Flutter and modern web technologies.",
     creator: "@bwissal",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  verification: {
+    google: 'your-google-verification-code', // Add your Google Search Console verification code
+  },
+  alternates: {
+    canonical: 'https://www.bwissal.software',
   },
 };
 
