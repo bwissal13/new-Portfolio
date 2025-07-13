@@ -1,6 +1,6 @@
-# Portfolio Website
+# Personal Portfolio Website
 
-A minimal, elegant portfolio website inspired by [rauno.me](https://rauno.me), built with Next.js, Tailwind CSS, and Framer Motion.
+A minimal, elegant portfolio website built with Next.js, Tailwind CSS, and Framer Motion.
 
 ## Features
 
@@ -193,14 +193,6 @@ The website is optimized for performance with:
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Acknowledgments
-
-- Design inspiration from [rauno.me](https://rauno.me)
-- Built with [Next.js](https://nextjs.org)
-- Styled with [Tailwind CSS](https://tailwindcss.com)
-- Animated with [Framer Motion](https://framer.com/motion)
-- Icons by [Lucide](https://lucide.dev)
 
 ## Support
 
