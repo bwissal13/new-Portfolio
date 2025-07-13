@@ -52,6 +52,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <ConditionalNavigation />
           <div className="min-h-screen bg-background w-full flex flex-col items-center">
             <main className="relative w-full max-w-screen-lg px-2 sm:px-4 md:px-8 mx-auto">
               {children}

@@ -262,6 +262,8 @@ export default function Home() {
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.6 }}
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
         className="hidden sm:block fixed top-6 left-52 z-10 text-2xl font-bold text-primary"
       >
         W.
@@ -272,6 +274,8 @@ export default function Home() {
         initial={{ opacity: 0, x: 20 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.6 }}
+        whileHover={{ scale: 1.05, y: -2 }}
+        whileTap={{ scale: 0.95 }}
         onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
         className="hidden sm:flex fixed top-6 right-52 z-30 p-2 rounded-lg bg-background/80 backdrop-blur-sm hover:bg-muted/50 transition-colors shadow-md border border-border"
         aria-label="Toggle theme"
@@ -288,6 +292,8 @@ export default function Home() {
         initial={{ opacity: 0, x: 20 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.6, delay: 0.1 }}
+        whileHover={{ scale: 1.05, y: -2 }}
+        whileTap={{ scale: 0.95 }}
         onClick={handleDownloadCV}
         className="hidden sm:flex fixed top-6 right-6 z-20 items-center gap-2 px-4 py-2 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors shadow-md"
         aria-label="Download CV"
@@ -325,7 +331,8 @@ export default function Home() {
             className="mb-16 flex justify-center"
           >
             <div className="relative w-full max-w-lg">
-              <input
+              <motion.input
+                whileFocus={{ scale: 1.02 }}
                 type="text"
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
@@ -337,12 +344,14 @@ export default function Home() {
                 placeholder="Ask me anything..."
                 className="w-full px-6 py-4 rounded-full border border-border bg-background/80 backdrop-blur-sm text-primary placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/20 transition-colors"
               />
-              <button 
+              <motion.button 
+                whileHover={{ scale: 1.1, y: -2 }}
+                whileTap={{ scale: 0.9 }}
                 onClick={handleGoToChat}
                 className="absolute right-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
               >
                 <Send className="h-4 w-4" />
-              </button>
+              </motion.button>
             </div>
           </motion.div>
 
@@ -356,9 +365,20 @@ export default function Home() {
             {navigationCards.map((card, index) => (
               <motion.div
                 key={card.title}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.4, delay: 0.1 * index + 0.9 }}
+                initial={{ opacity: 0, scale: 0.8, y: 20 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                transition={{ 
+                  duration: 0.5, 
+                  delay: 0.1 * index + 0.9,
+                  type: "spring",
+                  stiffness: 100
+                }}
+                whileHover={{ 
+                  scale: 1.05, 
+                  y: -5,
+                  transition: { duration: 0.2 }
+                }}
+                whileTap={{ scale: 0.95 }}
               >
                 <NavigationCard
                 title={card.title}
@@ -383,16 +403,29 @@ function NavigationCard({ title, icon: Icon, link, color }: {
   color: string;
 }) {
   return (
-    <Link
-      href={link}
-      className="group block py-3 px-2 rounded-lg bg-background/80 backdrop-blur-sm hover:bg-muted/50 transition-all duration-300 shadow-md hover:shadow-lg border border-border flex flex-col items-center justify-center"
+    <motion.div
+      whileHover={{ 
+        scale: 1.02,
+        transition: { duration: 0.2 }
+      }}
+      whileTap={{ scale: 0.98 }}
     >
-      <div className="text-center space-y-0.5">
-        <Icon className={`h-4 w-4 mx-auto ${color} group-hover:text-primary transition-colors`} />
-        <div className="text-[10px] font-medium text-muted-foreground group-hover:text-primary transition-colors">
-          {title}
+      <Link
+        href={link}
+        className="group block py-3 px-2 rounded-lg bg-background/80 backdrop-blur-sm hover:bg-muted/50 transition-all duration-300 shadow-md hover:shadow-lg border border-border flex flex-col items-center justify-center"
+      >
+        <div className="text-center space-y-0.5">
+          <motion.div
+            whileHover={{ rotate: 5 }}
+            transition={{ duration: 0.2 }}
+          >
+            <Icon className={`h-4 w-4 mx-auto ${color} group-hover:text-primary transition-colors`} />
+          </motion.div>
+          <div className="text-[10px] font-medium text-muted-foreground group-hover:text-primary transition-colors">
+            {title}
+          </div>
         </div>
-      </div>
-    </Link>
+      </Link>
+    </motion.div>
   );
 }

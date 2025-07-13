@@ -67,10 +67,20 @@ export default function About() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
+              whileHover={{ 
+                scale: 1.02, 
+                y: -5,
+                transition: { duration: 0.2 }
+              }}
               className="p-6 bg-muted/50 rounded-lg border border-border"
             >
               <div className="flex items-center gap-3 mb-4">
-                <Brain className="h-6 w-6 text-primary" />
+                <motion.div
+                  whileHover={{ rotate: 5 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <Brain className="h-6 w-6 text-primary" />
+                </motion.div>
                 <h3 className="font-semibold">Mathematical Foundation</h3>
               </div>
               <p className="text-sm text-muted-foreground mb-4">
@@ -89,10 +99,20 @@ export default function About() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
+              whileHover={{ 
+                scale: 1.02, 
+                y: -5,
+                transition: { duration: 0.2 }
+              }}
               className="p-6 bg-muted/50 rounded-lg border border-border"
             >
               <div className="flex items-center gap-3 mb-4">
-                <Code className="h-6 w-6 text-primary" />
+                <motion.div
+                  whileHover={{ rotate: 5 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <Code className="h-6 w-6 text-primary" />
+                </motion.div>
                 <h3 className="font-semibold">The "Aha!" Moment</h3>
               </div>
               <p className="text-sm text-muted-foreground mb-4">
@@ -110,10 +130,20 @@ export default function About() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
+              whileHover={{ 
+                scale: 1.02, 
+                y: -5,
+                transition: { duration: 0.2 }
+              }}
               className="p-6 bg-muted/50 rounded-lg border border-border md:col-span-2 lg:col-span-1"
             >
               <div className="flex items-center gap-3 mb-4">
-                <Palette className="h-6 w-6 text-primary" />
+                <motion.div
+                  whileHover={{ rotate: 5 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <Palette className="h-6 w-6 text-primary" />
+                </motion.div>
                 <h3 className="font-semibold">Youcode-UM6P Journey</h3>
               </div>
               <p className="text-sm text-muted-foreground mb-4">
@@ -138,44 +168,56 @@ export default function About() {
               <h2 className="text-2xl font-semibold text-primary">Technical Skills</h2>
               
               <div className="space-y-4">
-                <div className="p-4 bg-muted/50 rounded-lg border border-border">
+                <motion.div 
+                  whileHover={{ scale: 1.02, y: -2 }}
+                  transition={{ duration: 0.2 }}
+                  className="p-4 bg-muted/50 rounded-lg border border-border"
+                >
                   <h3 className="font-medium mb-2">Frontend Development</h3>
                   <p className="text-sm text-muted-foreground mb-3">
                     Building interactive user interfaces with modern frameworks and libraries
                   </p>
                   <div className="flex flex-wrap gap-2">
-                    <span className="px-2 py-1 text-xs bg-muted rounded-md">React</span>
-                    <span className="px-2 py-1 text-xs bg-muted rounded-md">Angular</span>
-                    <span className="px-2 py-1 text-xs bg-muted rounded-md">JavaScript</span>
-                    <span className="px-2 py-1 text-xs bg-muted rounded-md">TypeScript</span>
+                    <motion.span whileHover={{ scale: 1.05 }} className="px-2 py-1 text-xs bg-muted rounded-md">React</motion.span>
+                    <motion.span whileHover={{ scale: 1.05 }} className="px-2 py-1 text-xs bg-muted rounded-md">Angular</motion.span>
+                    <motion.span whileHover={{ scale: 1.05 }} className="px-2 py-1 text-xs bg-muted rounded-md">JavaScript</motion.span>
+                    <motion.span whileHover={{ scale: 1.05 }} className="px-2 py-1 text-xs bg-muted rounded-md">TypeScript</motion.span>
                   </div>
-                </div>
+                </motion.div>
                 
-                <div className="p-4 bg-muted/50 rounded-lg border border-border">
+                <motion.div 
+                  whileHover={{ scale: 1.02, y: -2 }}
+                  transition={{ duration: 0.2 }}
+                  className="p-4 bg-muted/50 rounded-lg border border-border"
+                >
                   <h3 className="font-medium mb-2">Backend Development</h3>
                   <p className="text-sm text-muted-foreground mb-3">
                     Creating scalable server-side applications and APIs
                   </p>
                   <div className="flex flex-wrap gap-2">
-                    <span className="px-2 py-1 text-xs bg-muted rounded-md">Spring Boot</span>
-                    <span className="px-2 py-1 text-xs bg-muted rounded-md">Laravel</span>
-                    <span className="px-2 py-1 text-xs bg-muted rounded-md">Java</span>
-                    <span className="px-2 py-1 text-xs bg-muted rounded-md">PHP</span>
+                    <motion.span whileHover={{ scale: 1.05 }} className="px-2 py-1 text-xs bg-muted rounded-md">Spring Boot</motion.span>
+                    <motion.span whileHover={{ scale: 1.05 }} className="px-2 py-1 text-xs bg-muted rounded-md">Laravel</motion.span>
+                    <motion.span whileHover={{ scale: 1.05 }} className="px-2 py-1 text-xs bg-muted rounded-md">Java</motion.span>
+                    <motion.span whileHover={{ scale: 1.05 }} className="px-2 py-1 text-xs bg-muted rounded-md">PHP</motion.span>
                   </div>
-                </div>
+                </motion.div>
 
-                <div className="p-4 bg-muted/50 rounded-lg border border-border">
+                <motion.div 
+                  whileHover={{ scale: 1.02, y: -2 }}
+                  transition={{ duration: 0.2 }}
+                  className="p-4 bg-muted/50 rounded-lg border border-border"
+                >
                   <h3 className="font-medium mb-2">Design & Visual Arts</h3>
                   <p className="text-sm text-muted-foreground mb-3">
                     Creating beautiful, user-centered designs and brand identities
                   </p>
                   <div className="flex flex-wrap gap-2">
-                    <span className="px-2 py-1 text-xs bg-muted rounded-md">UI/UX Design</span>
-                    <span className="px-2 py-1 text-xs bg-muted rounded-md">Figma</span>
-                    <span className="px-2 py-1 text-xs bg-muted rounded-md">Adobe Creative Suite</span>
-                    <span className="px-2 py-1 text-xs bg-muted rounded-md">Brand Identity</span>
+                    <motion.span whileHover={{ scale: 1.05 }} className="px-2 py-1 text-xs bg-muted rounded-md">UI/UX Design</motion.span>
+                    <motion.span whileHover={{ scale: 1.05 }} className="px-2 py-1 text-xs bg-muted rounded-md">Figma</motion.span>
+                    <motion.span whileHover={{ scale: 1.05 }} className="px-2 py-1 text-xs bg-muted rounded-md">Adobe Creative Suite</motion.span>
+                    <motion.span whileHover={{ scale: 1.05 }} className="px-2 py-1 text-xs bg-muted rounded-md">Brand Identity</motion.span>
                   </div>
-                </div>
+                </motion.div>
               </div>
             </div>
 
@@ -183,35 +225,53 @@ export default function About() {
               <h2 className="text-2xl font-semibold text-primary">Beyond Coding</h2>
               
               <div className="space-y-4">
-                <div className="p-4 bg-muted/50 rounded-lg border border-border">
+                <motion.div 
+                  whileHover={{ scale: 1.02, y: -2 }}
+                  transition={{ duration: 0.2 }}
+                  className="p-4 bg-muted/50 rounded-lg border border-border"
+                >
                   <div className="flex items-center gap-2 mb-2">
-                    <Brain className="h-4 w-4 text-primary" />
+                    <motion.div whileHover={{ rotate: 5 }} transition={{ duration: 0.2 }}>
+                      <Brain className="h-4 w-4 text-primary" />
+                    </motion.div>
                     <h3 className="font-medium">Deep Thinking 🐻</h3>
                   </div>
                   <p className="text-sm text-muted-foreground">
                     Analytical problem-solving approach and strategic project planning
                   </p>
-                </div>
+                </motion.div>
                 
-                <div className="p-4 bg-muted/50 rounded-lg border border-border">
+                <motion.div 
+                  whileHover={{ scale: 1.02, y: -2 }}
+                  transition={{ duration: 0.2 }}
+                  className="p-4 bg-muted/50 rounded-lg border border-border"
+                >
                   <div className="flex items-center gap-2 mb-2">
-                    <Coffee className="h-4 w-4 text-primary" />
+                    <motion.div whileHover={{ rotate: 5 }} transition={{ duration: 0.2 }}>
+                      <Coffee className="h-4 w-4 text-primary" />
+                    </motion.div>
                     <h3 className="font-medium">Cooking Arts 🍳</h3>
                   </div>
                   <p className="text-sm text-muted-foreground">
                     Finding creativity through cooking and using cooking breaks for problem-solving
                   </p>
-                </div>
+                </motion.div>
 
-                <div className="p-4 bg-muted/50 rounded-lg border border-border">
+                <motion.div 
+                  whileHover={{ scale: 1.02, y: -2 }}
+                  transition={{ duration: 0.2 }}
+                  className="p-4 bg-muted/50 rounded-lg border border-border"
+                >
                   <div className="flex items-center gap-2 mb-2">
-                    <Palette className="h-4 w-4 text-primary" />
+                    <motion.div whileHover={{ rotate: 5 }} transition={{ duration: 0.2 }}>
+                      <Palette className="h-4 w-4 text-primary" />
+                    </motion.div>
                     <h3 className="font-medium">Graphic Design 🛍️</h3>
                   </div>
                   <p className="text-sm text-muted-foreground">
                     Creating brand identities and visual systems, bridging design with development
                   </p>
-                </div>
+                </motion.div>
               </div>
             </div>
           </motion.div>
@@ -245,18 +305,30 @@ export default function About() {
             transition={{ duration: 0.8, delay: 0.9 }}
             className="grid gap-4 md:grid-cols-3 mb-16"
           >
-            <div className="p-4 bg-muted/50 rounded-lg border border-border text-center">
+            <motion.div 
+              whileHover={{ scale: 1.02, y: -2 }}
+              transition={{ duration: 0.2 }}
+              className="p-4 bg-muted/50 rounded-lg border border-border text-center"
+            >
               <h3 className="font-semibold text-primary mb-2">GitHub Pull Shark</h3>
               <p className="text-sm text-muted-foreground">Multiple pull requests and active open source contributions</p>
-            </div>
-            <div className="p-4 bg-muted/50 rounded-lg border border-border text-center">
+            </motion.div>
+            <motion.div 
+              whileHover={{ scale: 1.02, y: -2 }}
+              transition={{ duration: 0.2 }}
+              className="p-4 bg-muted/50 rounded-lg border border-border text-center"
+            >
               <h3 className="font-semibold text-primary mb-2">Zero Critical Bugs</h3>
               <p className="text-sm text-muted-foreground">Built eBankify with enterprise-level security and reliability</p>
-            </div>
-            <div className="p-4 bg-muted/50 rounded-lg border border-border text-center">
+            </motion.div>
+            <motion.div 
+              whileHover={{ scale: 1.02, y: -2 }}
+              transition={{ duration: 0.2 }}
+              className="p-4 bg-muted/50 rounded-lg border border-border text-center"
+            >
               <h3 className="font-semibold text-primary mb-2">6 Projects Built</h3>
               <p className="text-sm text-muted-foreground">From banking systems to learning platforms</p>
-            </div>
+            </motion.div>
           </motion.div>
 
           {/* Contact Links */}
@@ -334,42 +406,61 @@ export default function About() {
 
 function ProjectCard({ project }: { project: typeof projects[0] }) {
   return (
-    <Link 
-      href={project.github}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="group block p-6 rounded-lg border border-border hover:bg-muted/50 transition-colors"
+    <motion.div
+      whileHover={{ scale: 1.01, y: -2 }}
+      transition={{ duration: 0.2 }}
     >
-      <article className="space-y-4">
-        <div className="flex items-center justify-between">
-          <h3 className="text-xl font-semibold group-hover:text-primary transition-colors">
-            {project.title}
-          </h3>
-          <ExternalLink className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-colors" />
-        </div>
-        
-        <div className="flex items-center gap-2 text-sm text-muted-foreground">
-          <span className="px-2 py-1 text-xs bg-muted rounded-md">
-            {project.type}
-          </span>
-        </div>
-        
-        <p className="text-muted-foreground leading-relaxed">
-          {project.description}
-        </p>
-        
-        <div className="flex flex-wrap gap-2">
-          {project.technologies.map((tech) => (
-            <span 
-              key={tech}
-              className="px-2 py-1 text-xs bg-muted rounded-md"
+      <Link 
+        href={project.github}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group block p-6 rounded-lg border border-border hover:bg-muted/50 transition-colors"
+      >
+        <article className="space-y-4">
+          <div className="flex items-center justify-between">
+            <h3 className="text-xl font-semibold group-hover:text-primary transition-colors">
+              {project.title}
+            </h3>
+            <motion.div
+              whileHover={{ x: 2, y: -2 }}
+              transition={{ duration: 0.2 }}
             >
-              {tech}
+              <ExternalLink className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-colors" />
+            </motion.div>
+          </div>
+          
+          <div className="flex items-center gap-2 text-sm text-muted-foreground">
+            <span className="px-2 py-1 text-xs bg-muted rounded-md">
+              {project.type}
             </span>
-          ))}
-        </div>
-      </article>
-    </Link>
+          </div>
+          
+          <p className="text-muted-foreground leading-relaxed">
+            {project.description}
+          </p>
+          
+          <div className="flex flex-wrap gap-2">
+            {project.technologies.map((tech, index) => (
+              <motion.span 
+                key={tech}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ 
+                  duration: 0.3, 
+                  delay: index * 0.05,
+                  type: "spring",
+                  stiffness: 100
+                }}
+                whileHover={{ scale: 1.05 }}
+                className="px-2 py-1 text-xs bg-muted rounded-md"
+              >
+                {tech}
+              </motion.span>
+            ))}
+          </div>
+        </article>
+      </Link>
+    </motion.div>
   );
 }
 
@@ -385,28 +476,43 @@ function ContactCard({
   linkText: string;
 }) {
   return (
-    <Link
-      href={href}
-      target={href.startsWith('http') ? "_blank" : undefined}
-      rel={href.startsWith('http') ? "noopener noreferrer" : undefined}
-      className="group block p-4 rounded-lg border border-border hover:bg-muted/50 transition-colors"
+    <motion.div
+      whileHover={{ scale: 1.02, y: -2 }}
+      whileTap={{ scale: 0.98 }}
+      transition={{ duration: 0.2 }}
     >
-      <div className="flex items-center gap-3">
-        <div className="flex-shrink-0 text-primary">
-          {icon}
-        </div>
-        <div className="flex-1 min-w-0">
-          <div className="flex items-center justify-between">
-            <h3 className="font-medium group-hover:text-primary transition-colors">
-              {title}
-            </h3>
-            <ArrowUpRight className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
+      <Link
+        href={href}
+        target={href.startsWith('http') ? "_blank" : undefined}
+        rel={href.startsWith('http') ? "noopener noreferrer" : undefined}
+        className="group block p-4 rounded-lg border border-border hover:bg-muted/50 transition-colors"
+      >
+        <div className="flex items-center gap-3">
+          <motion.div 
+            className="flex-shrink-0 text-primary"
+            whileHover={{ rotate: 5 }}
+            transition={{ duration: 0.2 }}
+          >
+            {icon}
+          </motion.div>
+          <div className="flex-1 min-w-0">
+            <div className="flex items-center justify-between">
+              <h3 className="font-medium group-hover:text-primary transition-colors">
+                {title}
+              </h3>
+              <motion.div
+                whileHover={{ x: 2, y: -2 }}
+                transition={{ duration: 0.2 }}
+              >
+                <ArrowUpRight className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
+              </motion.div>
+            </div>
+            <p className="text-sm text-muted-foreground mt-1 group-hover:text-primary transition-colors">
+              {linkText}
+            </p>
           </div>
-          <p className="text-sm text-muted-foreground mt-1 group-hover:text-primary transition-colors">
-            {linkText}
-          </p>
         </div>
-      </div>
-    </Link>
+      </Link>
+    </motion.div>
   );
 } 

@@ -170,17 +170,36 @@ export default function Contact() {
             
             <div className="grid md:grid-cols-2 gap-6">
               {collaborationTypes.map((type, index) => (
-                <div key={type.title} className="p-4 bg-muted/50 rounded-lg">
+                <motion.div 
+                  key={type.title} 
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.1 * index }}
+                  whileHover={{ scale: 1.02, y: -2 }}
+                  className="p-4 bg-muted/50 rounded-lg"
+                >
                   <h3 className="font-medium mb-2">{type.title}</h3>
                   <p className="text-sm text-muted-foreground mb-3">{type.description}</p>
                   <div className="flex flex-wrap gap-2">
-                    {type.examples.map((example) => (
-                      <span key={example} className="px-2 py-1 bg-primary/10 text-primary text-xs rounded">
+                    {type.examples.map((example, exampleIndex) => (
+                      <motion.span 
+                        key={example} 
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ 
+                          duration: 0.3, 
+                          delay: 0.1 * index + 0.05 * exampleIndex,
+                          type: "spring",
+                          stiffness: 100
+                        }}
+                        whileHover={{ scale: 1.05 }}
+                        className="px-2 py-1 bg-primary/10 text-primary text-xs rounded"
+                      >
                         {example}
-                      </span>
+                      </motion.span>
                     ))}
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
           </motion.div>
@@ -190,6 +209,7 @@ export default function Contact() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
+            whileHover={{ scale: 1.01, y: -2 }}
             className="p-6 bg-muted/50 rounded-lg mb-16 border-l-4 border-primary"
           >
             <h3 className="text-lg font-semibold text-primary mb-3">Want to chat right now?</h3>
@@ -197,13 +217,18 @@ export default function Contact() {
               Try my AI chat assistant! It knows all about my projects, skills, and journey. 
               Perfect for quick questions or getting to know more about my work.
             </p>
-            <Link
-              href="/chat"
-              className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground hover:bg-primary/90 rounded-lg transition-colors"
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
-              <MessageCircle className="w-4 h-4" />
-              Start a Conversation
-            </Link>
+              <Link
+                href="/chat"
+                className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground hover:bg-primary/90 rounded-lg transition-colors"
+              >
+                <MessageCircle className="w-4 h-4" />
+                Start a Conversation
+              </Link>
+            </motion.div>
           </motion.div>
 
           {/* Call to Action */}
@@ -219,21 +244,31 @@ export default function Contact() {
               I'm excited to hear from you and explore how we can work together!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="mailto:baazizwissal13@gmail.com"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+              <motion.div
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.95 }}
               >
-                Send Email
-                <ArrowUpRight className="h-4 w-4" />
-              </a>
+                <a
+                  href="mailto:baazizwissal13@gmail.com"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+                >
+                  Send Email
+                  <ArrowUpRight className="h-4 w-4" />
+                </a>
+              </motion.div>
               
-              <Link
-                href="/chat"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-border hover:bg-muted transition-colors"
+              <motion.div
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.95 }}
               >
-                Start Chat
-                <ArrowUpRight className="h-4 w-4" />
-              </Link>
+                <Link
+                  href="/chat"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-border hover:bg-muted transition-colors"
+                >
+                  Start Chat
+                  <ArrowUpRight className="h-4 w-4" />
+                </Link>
+              </motion.div>
             </div>
           </motion.div>
         </motion.section>
@@ -258,35 +293,50 @@ function ContactCard({
   available: string;
 }) {
   return (
-    <Link
-      href={href}
-      target={href.startsWith('http') ? "_blank" : undefined}
-      rel={href.startsWith('http') ? "noopener noreferrer" : undefined}
-      className="group block p-4 rounded-lg border border-border hover:bg-muted/50 transition-colors"
+    <motion.div
+      whileHover={{ scale: 1.02, y: -2 }}
+      whileTap={{ scale: 0.98 }}
+      transition={{ duration: 0.2 }}
     >
-      <div className="flex items-start gap-3">
-        <div className="flex-shrink-0 mt-1 text-primary">
-          {icon}
-        </div>
-        <div className="flex-1 min-w-0">
-          <div className="flex items-center justify-between">
-            <h3 className="font-medium group-hover:text-primary transition-colors">
-              {title}
-            </h3>
-            <ArrowUpRight className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
+      <Link
+        href={href}
+        target={href.startsWith('http') ? "_blank" : undefined}
+        rel={href.startsWith('http') ? "noopener noreferrer" : undefined}
+        className="group block p-4 rounded-lg border border-border hover:bg-muted/50 transition-colors"
+      >
+        <div className="flex items-start gap-3">
+          <motion.div 
+            className="flex-shrink-0 mt-1 text-primary"
+            whileHover={{ rotate: 5 }}
+            transition={{ duration: 0.2 }}
+          >
+            {icon}
+          </motion.div>
+          <div className="flex-1 min-w-0">
+            <div className="flex items-center justify-between">
+              <h3 className="font-medium group-hover:text-primary transition-colors">
+                {title}
+              </h3>
+              <motion.div
+                whileHover={{ x: 2, y: -2 }}
+                transition={{ duration: 0.2 }}
+              >
+                <ArrowUpRight className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
+              </motion.div>
+            </div>
+            <p className="text-sm text-muted-foreground mt-1">
+              {description}
+            </p>
+            <p className="text-sm font-medium mt-2 group-hover:text-primary transition-colors">
+              {linkText}
+            </p>
+            <p className="text-xs text-muted-foreground mt-1">
+              {available}
+            </p>
           </div>
-          <p className="text-sm text-muted-foreground mt-1">
-            {description}
-          </p>
-          <p className="text-sm font-medium mt-2 group-hover:text-primary transition-colors">
-            {linkText}
-          </p>
-          <p className="text-xs text-muted-foreground mt-1">
-            {available}
-          </p>
         </div>
-      </div>
-    </Link>
+      </Link>
+    </motion.div>
   );
 }
 
@@ -306,34 +356,49 @@ function SocialCard({
   stats: string;
 }) {
   return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="group block p-4 rounded-lg border border-border hover:bg-muted/50 transition-colors"
+    <motion.div
+      whileHover={{ scale: 1.02, y: -2 }}
+      whileTap={{ scale: 0.98 }}
+      transition={{ duration: 0.2 }}
     >
-      <div className="flex items-start gap-3">
-        <div className="flex-shrink-0 mt-1 text-primary">
-          {icon}
-        </div>
-        <div className="flex-1 min-w-0">
-          <div className="flex items-center justify-between">
-            <h3 className="font-medium group-hover:text-primary transition-colors">
-              {platform}
-            </h3>
-            <ArrowUpRight className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group block p-4 rounded-lg border border-border hover:bg-muted/50 transition-colors"
+      >
+        <div className="flex items-start gap-3">
+          <motion.div 
+            className="flex-shrink-0 mt-1 text-primary"
+            whileHover={{ rotate: 5 }}
+            transition={{ duration: 0.2 }}
+          >
+            {icon}
+          </motion.div>
+          <div className="flex-1 min-w-0">
+            <div className="flex items-center justify-between">
+              <h3 className="font-medium group-hover:text-primary transition-colors">
+                {platform}
+              </h3>
+              <motion.div
+                whileHover={{ x: 2, y: -2 }}
+                transition={{ duration: 0.2 }}
+              >
+                <ArrowUpRight className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
+              </motion.div>
+            </div>
+            <p className="text-sm text-primary font-medium mt-1">
+              {username}
+            </p>
+            <p className="text-sm text-muted-foreground mt-1">
+              {description}
+            </p>
+            <p className="text-xs text-muted-foreground mt-2">
+              {stats}
+            </p>
           </div>
-          <p className="text-sm text-primary font-medium mt-1">
-            {username}
-          </p>
-          <p className="text-sm text-muted-foreground mt-1">
-            {description}
-          </p>
-          <p className="text-xs text-muted-foreground mt-2">
-            {stats}
-          </p>
         </div>
-      </div>
-    </a>
+      </a>
+    </motion.div>
   );
 } 

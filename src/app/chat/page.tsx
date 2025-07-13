@@ -33,13 +33,18 @@ export default function ChatPage() {
     return (
       <div className="min-h-screen bg-background">
         {/* Full-screen toggle button */}
-        <button
+        <motion.button
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.3 }}
+          whileHover={{ scale: 1.05, y: -2 }}
+          whileTap={{ scale: 0.95 }}
           onClick={toggleFullScreen}
           className="fixed top-6 right-6 z-50 p-3 rounded-lg bg-background/80 backdrop-blur-sm hover:bg-muted/50 transition-colors shadow-md border border-border"
           aria-label="Exit full screen"
         >
           <Minimize className="h-5 w-5" />
-        </button>
+        </motion.button>
         {/* Full-screen chat */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -68,14 +73,19 @@ export default function ChatPage() {
       <ConditionalNavigation isChatFullScreen={isFullScreen} />
       {/* Floating expand button under nav when chat is collapsed */}
       {!showFullChat && (
-        <button
+        <motion.button
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5 }}
+          whileHover={{ scale: 1.05, y: -2 }}
+          whileTap={{ scale: 0.95 }}
           onClick={() => setShowFullChat(true)}
           className="fixed left-6 top-20 z-50 p-3 rounded-lg bg-background/80 backdrop-blur-sm hover:bg-muted/50 transition-colors shadow-md border border-border flex items-center gap-2"
           aria-label="Expand chat"
         >
           <Maximize className="h-5 w-5" />
           <span className="text-sm font-medium">Open Chat</span>
-        </button>
+        </motion.button>
       )}
       {/* Enhanced Chat Interface */}
       {showFullChat && (
@@ -104,13 +114,18 @@ export default function ChatPage() {
               style={{ height: 'calc(100vh - 240px)' }}
             >
               {/* Expand button in top-right of card */}
-              <button
+              <motion.button
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.3, delay: 0.3 }}
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.95 }}
                 onClick={toggleFullScreen}
                 className="absolute top-4 right-4 z-10 p-3 rounded-lg bg-background/80 backdrop-blur-sm hover:bg-muted/50 transition-colors shadow-md border border-border"
                 aria-label="Expand to full screen"
               >
                 <Maximize className="h-5 w-5" />
-              </button>
+              </motion.button>
               <div className="h-full">
                 <AIChat 
                   isOpen={true} 
