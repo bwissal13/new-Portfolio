@@ -27,11 +27,11 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Wissal Baaziz" }, { name: "bwissal" }],
   creator: "Wissal Baaziz",
-  metadataBase: new URL("https://www.bwissal.software"),
+  metadataBase: new URL("https://www.bwissal.me"),
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://www.bwissal.software",
+    url: "https://www.bwissal.me",
     title: "Wissal Baaziz (bwissal) - Full-Stack Developer & UI/UX Designer",
     description: "Wissal Baaziz (bwissal) - Full-stack developer and UI/UX designer specializing in Spring Boot, Laravel, React, Angular, Flutter and modern web technologies. Creating scalable applications with exceptional user experience.",
     siteName: "Wissal Baaziz Portfolio",
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     google: 'your-google-verification-code', // Add your Google Search Console verification code
   },
   alternates: {
-    canonical: 'https://www.bwissal.software',
+    canonical: 'https://www.bwissal.me',
   },
 };
 
@@ -73,6 +73,68 @@ export default function RootLayout({
         <link rel="icon" type="image/png" href="/w.png" sizes="32x32" />
         <link rel="shortcut icon" href="/w.png" />
         <link rel="icon" type="image/x-icon" href="/w.png" />
+        
+        {/* Structured Data for SEO */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              "name": "Wissal Baaziz",
+              "alternateName": "bwissal",
+              "jobTitle": "Full-Stack Developer & UI/UX Designer",
+              "description": "Passionate Full Stack Developer and UI/UX Designer with a mathematics background, currently honing skills at Youcode-UM6P. Transforms ideas into elegant, functional solutions with a focus on scalable applications, beautiful user interfaces, and clean code architecture.",
+              "url": "https://www.bwissal.me",
+              "image": "https://www.bwissal.me/me.jpeg",
+              "email": "baazizwissal13@gmail.com",
+              "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "Morocco"
+              },
+              "alumniOf": {
+                "@type": "EducationalOrganization",
+                "name": "Youcode-UM6P"
+              },
+              "knowsAbout": [
+                "Spring Boot", "Laravel", "React", "Angular", "Flutter", "Java", "PHP", 
+                "JavaScript", "UI/UX Design", "Graphic Design", "MySQL", "PostgreSQL"
+              ],
+              "hasOccupation": {
+                "@type": "Occupation",
+                "name": "Full-Stack Developer",
+                "description": "Developing scalable web applications using modern technologies"
+              },
+              "sameAs": [
+                "https://github.com/bwissal13",
+                "https://linkedin.com/in/baaziz-wissal-311a9526a",
+                "https://www.instagram.com/baazizwissal/"
+              ]
+            })
+          }}
+        />
+        
+        {/* Website Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "Wissal Baaziz Portfolio",
+              "url": "https://www.bwissal.me",
+              "description": "Portfolio website of Wissal Baaziz, a Full-Stack Developer and UI/UX Designer from Morocco",
+              "author": {
+                "@type": "Person",
+                "name": "Wissal Baaziz"
+              },
+              "publisher": {
+                "@type": "Person",
+                "name": "Wissal Baaziz"
+              }
+            })
+          }}
+        />
       </head>
       <body className={`${inter.variable} ${geistMono.variable} font-sans antialiased`}>
         <ThemeProvider

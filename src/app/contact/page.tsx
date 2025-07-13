@@ -35,9 +35,9 @@ const socialProfiles = [
   {
     icon: Globe,
     platform: "Portfolio Website",
-    username: "bwissal.software",
+          username: "bwissal.me",
     description: "Complete showcase of my projects and professional work",
-    url: "https://www.bwissal.software/",
+          url: "https://www.bwissal.me/",
     stats: "Full portfolio • Project details"
   },
   {

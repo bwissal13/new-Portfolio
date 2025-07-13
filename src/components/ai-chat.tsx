@@ -376,11 +376,11 @@ const knowledgeBase = {
     role: "Full Stack Developer | Digital Craftsman | Code Architect",
     education: "Currently at Youcode-UM6P",
     background: "Mathematics background with a love for problem-solving",
-    email: "contact@bwissal.software",
+    email: "contact@bwissal.me",
     github: "https://github.com/bwissal13",
     linkedin: "https://www.linkedin.com/in/baaziz-wissal-311a9526a/",
     instagram: "https://www.instagram.com/baazizwissal/",
-    website: "https://www.bwissal.software"
+    website: "https://www.bwissal.me"
   },
   skills: {
     frontend: [
@@ -580,9 +580,9 @@ Each project taught me something new and pushed me to solve different challenges
   // Contact
   if (message.includes('contact') || message.includes('email') || message.includes('reach') || message.includes('hire')) {
     const responses = [
-      "I'd absolutely love to chat! 📧 You can reach me at contact@bwissal.software or check out my work on GitHub at github.com/bwissal13. I'm also on LinkedIn at linkedin.com/in/baaziz-wissal-311a9526a if that's your thing. And hey, if you're into Instagram, I share some behind-the-scenes stuff at @baazizwissal! Always happy to discuss new projects or just talk tech. What's on your mind?",
-      "Feel free to drop me a line! 🚀 My email is contact@bwissal.software and I'm always open to interesting conversations and potential collaborations. You can also find me on GitHub (github.com/bwissal13), LinkedIn, and Instagram @baazizwissal. I love connecting with fellow developers and designers! What kind of project are you working on?",
-      "Let's connect! 💫 My email is contact@bwissal.software and you can see more of my work at bwissal.software. I'm pretty active on GitHub (github.com/bwissal13) if you want to check out my code, and I'm on LinkedIn and Instagram too (@baazizwissal). I'm always excited to meet new people in the tech community! What's the best way to reach you?"
+      "I'd absolutely love to chat! 📧 You can reach me at contact@bwissal.me or check out my work on GitHub at github.com/bwissal13. I'm also on LinkedIn at linkedin.com/in/baaziz-wissal-311a9526a if that's your thing. And hey, if you're into Instagram, I share some behind-the-scenes stuff at @baazizwissal! Always happy to discuss new projects or just talk tech. What's on your mind?",
+      "Feel free to drop me a line! 🚀 My email is contact@bwissal.me and I'm always open to interesting conversations and potential collaborations. You can also find me on GitHub (github.com/bwissal13), LinkedIn, and Instagram @baazizwissal. I love connecting with fellow developers and designers! What kind of project are you working on?",
+      "Let's connect! 💫 My email is baazizwissal13@gmail.com and you can see more of my work at bwissal.me. I'm pretty active on GitHub (github.com/bwissal13) if you want to check out my code, and I'm on LinkedIn and Instagram too (@baazizwissal). I'm always excited to meet new people in the tech community! What's the best way to reach you?"
     ];
     return responses[Math.floor(Math.random() * responses.length)];
   }

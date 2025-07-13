@@ -298,12 +298,12 @@ async function fetchLinkedInProfile(): Promise<any> {
 async function fetchWebsiteData(): Promise<any> {
   try {
     // Try to fetch website information
-    const websiteInfo = await fetchProfileInfo('https://www.bwissal.software/');
+    const websiteInfo = await fetchProfileInfo('https://www.bwissal.me/');
     
     // Return structured website data
     return {
       portfolio: {
-        url: "https://www.bwissal.software/",
+        url: "https://www.bwissal.me/",
         description: "Personal portfolio showcasing full-stack development projects",
         projects: ["eBankify", "Anazor", "Tafukut", "TaskifyApi"],
         message: "Visit the desktop view to see my portfolio",
