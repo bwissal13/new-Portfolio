@@ -5,13 +5,14 @@ import { useSearchParams } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { Maximize, Minimize } from 'lucide-react';
 import { AIChat } from '@/components/ai-chat';
-import { ConditionalNavigation } from '@/components/conditional-navigation';
+import { useChatContext } from '@/components/chat-context';
 
 function ChatPageContent() {
   const searchParams = useSearchParams();
   const [initialMessage, setInitialMessage] = useState<string>("");
   const [showFullChat, setShowFullChat] = useState(false);
   const [isFullScreen, setIsFullScreen] = useState(false);
+  const { setChatCollapsed, setChatFullScreen } = useChatContext();
 
   useEffect(() => {
     // Get the initial message from URL parameters
@@ -23,6 +24,15 @@ function ChatPageContent() {
     // Show the chat interface after a brief delay for smooth transition
     setTimeout(() => setShowFullChat(true), 500);
   }, [searchParams]);
+
+  // Sync chat state with context
+  useEffect(() => {
+    setChatCollapsed(!showFullChat);
+  }, [showFullChat, setChatCollapsed]);
+
+  useEffect(() => {
+    setChatFullScreen(isFullScreen);
+  }, [isFullScreen, setChatFullScreen]);
 
   const toggleFullScreen = () => {
     setIsFullScreen(!isFullScreen);
@@ -40,7 +50,7 @@ function ChatPageContent() {
           whileHover={{ scale: 1.05, y: -2 }}
           whileTap={{ scale: 0.95 }}
           onClick={toggleFullScreen}
-          className="fixed top-6 right-6 z-50 p-3 rounded-lg bg-background/80 backdrop-blur-sm hover:bg-muted/50 transition-colors shadow-md border border-border"
+          className="fixed top-2 right-6 z-50 p-3 lg:pr-[9rem]"
           aria-label="Exit full screen"
         >
           <Minimize className="h-5 w-5" />
@@ -70,7 +80,6 @@ function ChatPageContent() {
   // Normal card mode
   return (
     <div className="min-h-screen bg-background">
-    
       {/* Enhanced Chat Interface */}
       {showFullChat && (
         <div className="pt-20 px-4 md:px-8 lg:px-16 xl:px-24 2xl:px-32">
@@ -120,6 +129,13 @@ function ChatPageContent() {
               </div>
             </motion.div>
           </div>
+        </div>
+      )}
+      
+      {/* When chat is collapsed, show nothing - just a blank page */}
+      {!showFullChat && (
+        <div className="min-h-screen bg-background">
+          {/* Empty page when chat is collapsed */}
         </div>
       )}
     </div>

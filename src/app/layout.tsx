@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ConditionalNavigation } from "@/components/conditional-navigation";
+import { ChatProvider } from "@/components/chat-context";
 import "./globals.css";
 
 const inter = Inter({ 
@@ -58,12 +59,14 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <ConditionalNavigation />
-          <div className="min-h-screen bg-background w-full flex flex-col items-center">
-            <main className="relative w-full max-w-screen-lg px-2 sm:px-4 md:px-8 mx-auto">
-              {children}
-            </main>
-          </div>
+          <ChatProvider>
+            <ConditionalNavigation />
+            <div className="min-h-screen bg-background w-full flex flex-col items-center">
+              <main className="relative w-full max-w-screen-lg px-2 sm:px-4 md:px-8 mx-auto">
+                {children}
+              </main>
+            </div>
+          </ChatProvider>
         </ThemeProvider>
       </body>
     </html>
