@@ -228,7 +228,7 @@ export default function Home() {
   }
 
   return (
-    <div className="h-screen bg-background overflow-hidden relative">
+    <div className="min-h-screen flex flex-col bg-background overflow-hidden relative">
       {/* Mobile Top Bar: W. left, theme icon right, CV button below */}
       <div className="sm:hidden px-4 pt-4 pb-2">
         <div className="flex items-center justify-between">
@@ -256,7 +256,6 @@ export default function Home() {
       </div>
       {/* Background Animation */}
       <CodeBackground />
-      
       {/* Logo */}
       <motion.div
         initial={{ opacity: 0, x: -20 }}
@@ -268,7 +267,6 @@ export default function Home() {
       >
         W.
       </motion.div>
-
       {/* Theme Toggle */}
       <motion.button
         initial={{ opacity: 0, x: 20 }}
@@ -286,7 +284,6 @@ export default function Home() {
           <Moon className="h-4 w-4" />
         )}
       </motion.button>
-
       {/* CV Download Button */}
       <motion.button
         initial={{ opacity: 0, x: 20 }}
@@ -301,10 +298,8 @@ export default function Home() {
         <Download className="h-4 w-4" />
         <span className="text-sm font-medium">Curriculum Vitae</span>
       </motion.button>
-
       {/* Main Content */}
-      <section className="h-full flex flex-col justify-center items-center px-6 relative z-10">
-        {/* Main Content */}
+      <section className="flex flex-col items-center px-4 pt-32 md:pt-32 relative z-10">
         <div className="w-full max-w-6xl mx-auto text-center">
           {/* Greeting with Typewriter Animation */}
           <motion.div
@@ -322,7 +317,6 @@ export default function Home() {
               {greeting.isComplete && !portfolio.isComplete && <span className="animate-pulse">|</span>}
             </h2>
           </motion.div>
-
           {/* Input Field */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -342,19 +336,16 @@ export default function Home() {
                   }
                 }}
                 placeholder="Ask me anything..."
-                className="w-full px-4 md:px-6 py-3 md:py-4 rounded-full border border-border bg-background/80 backdrop-blur-sm text-primary placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/20 transition-colors text-sm md:text-base"
+                className="w-full pr-12 pl-4 md:pl-6 py-3 md:py-4 rounded-full border border-border bg-background/80 backdrop-blur-sm text-primary placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/20 transition-colors text-sm md:text-base"
               />
-              <motion.button 
-                whileHover={{ scale: 1.1, y: -2 }}
-                whileTap={{ scale: 0.9 }}
+              <button
                 onClick={handleGoToChat}
                 className="absolute right-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
               >
                 <Send className="h-4 w-4" />
-              </motion.button>
+              </button>
             </div>
           </motion.div>
-
           {/* Navigation Cards */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
